@@ -1,0 +1,151 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* BODY FULL SCREEN */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+/* LIGHT MODE */
+body.light-mode {
+    background: linear-gradient(135deg, #ffffff, #e0f2fe);
+    color: #0f172a;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: linear-gradient(135deg, #020617, #1e293b);
+    color: #f8fafc;
+}
+
+/* MAIN CONTAINER */
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+.app-header {
+    text-align: center;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    color: #2563eb;
+}
+
+.app-header p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+#themeToggle {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: #38bdf8;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* CLOCK */
+.clock-section {
+    text-align: center;
+}
+
+#clockTime {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+#clockDate {
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+/* STOPWATCH */
+.stopwatch-section {
+    text-align: center;
+}
+
+#stopwatchDisplay {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #2563eb;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.controls button:hover {
+    background: #38bdf8;
+}
+
+/* LAPS */
+#lapList {
+    list-style: none;
+    max-height: 120px;
+    overflow-y: auto;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #clockTime {
+        font-size: 3rem;
+    }
+    #stopwatchDisplay {
+        font-size: 2rem;
+    }
+}
